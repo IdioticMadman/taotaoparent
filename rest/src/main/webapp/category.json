@@ -1,4 +1,5 @@
-{"data": [
+category.getDataService({
+  "data": [
     {
       "u": "/products/1.html",
       "n": "<a href='/products/1.html'>图书、音像、电子书刊</a>",
@@ -1379,4 +1380,4 @@
       ]
     }
   ]
-}
+});

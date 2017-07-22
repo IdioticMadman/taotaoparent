@@ -16,7 +16,7 @@ public class FtpTest {
     public void testFtp(){
         FTPClient ftpClient = new FTPClient();
         try {
-            ftpClient.connect("192.168.1.104",21);
+            ftpClient.connect("192.168.1.105",21);
             ftpClient.login("ftpuser","123123");
             FileInputStream fileInputStream = new FileInputStream(new File("/Users/robert/Pictures/WechatIMG6.jpeg"));
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
@@ -31,7 +31,7 @@ public class FtpTest {
     public void testFtpUtil(){
         try {
             FileInputStream fileInputStream = new FileInputStream(new File("/Users/robert/Pictures/WechatIMG6.jpeg"));
-            FtpUtil.uploadFile("192.168.1.104",21,"ftpuser","123123","/ftpdir","/image","beautiful.jpg",fileInputStream);
+            FtpUtil.uploadFile("192.168.1.105",21,"ftpuser","123123","/ftpdir","/image","beautiful.jpg",fileInputStream);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

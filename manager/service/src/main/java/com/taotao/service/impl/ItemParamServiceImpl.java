@@ -30,7 +30,7 @@ public class ItemParamServiceImpl implements ItemParamService {
     public EUDataGirdResult getItemParamList(int page, int rows) {
         TbItemParamExample example = new TbItemParamExample();
         PageHelper.startPage(page, rows);
-        List<TbItemParam> list = tbItemParamMapper.selectByExample(example);
+        List<TbItemParam> list = tbItemParamMapper.selectByExampleWithBLOBsAndItemCat(example);
         PageInfo<TbItemParam> pageInfo = new PageInfo<>(list);
         EUDataGirdResult result = new EUDataGirdResult();
         result.setRows(list);
